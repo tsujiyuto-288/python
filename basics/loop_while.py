@@ -14,9 +14,9 @@ def loop_while_1():
 def loop_while_2():
     retry = 0
     while retry < 3:
-        response = api_call()
-        if response.success:
-            break
+        # response = api_call()
+        #if response.success:
+        #    break
         print(f"{retry}回目のアクセスに失敗しました")
         retry += 1
 
@@ -27,9 +27,9 @@ def loop_while_3():
     import time
     retry = 0
     while retry < 3:
-        response = api_call()
-        if response.success:
-            break
+        # response = api_call()
+        # if response.success:
+        #     break
         print(f"{retry}回目のアクセスに失敗しました")
         retry += 1
         time.sleep(10) # これで10秒待つ

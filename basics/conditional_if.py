@@ -39,6 +39,7 @@ def conditional_if_3():
 
 # 三項演算子を使った書き方
 def conditional_if_4():
+    age = input("年齢を入力してください")
     result = "成人です" if age >= 20 else "成人ではありません"
     print(result)
 
