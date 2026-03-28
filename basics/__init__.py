@@ -5,3 +5,4 @@ from .logicaloperators import *
 from .input import *
 from .loop_for import *
 from .str_method import *
+from .list_method import *
