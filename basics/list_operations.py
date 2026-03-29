@@ -27,7 +27,8 @@ def list_operations_3():
 
 # 対象の要素のインデックスを調べる　index()
 def list_operations_4():
-    member_index = input("調べたいメンバーを入力してください")
+    member = input("調べたいメンバーを入力してください")
+    member_index = members.index(member)
     print(member_index)
 
 # 例 popとindexを組み合わせる
@@ -70,3 +71,30 @@ def list_operations_8():
 # 要素の数を調べる len()
 def list_operations_9():
     print(f"要素数は{len(members)}です")
+
+
+
+# リスト内包表記
+# 【リスト名 = [式 for 変数 in イテラブルオブジェクト]】と書くことができる
+def list_operations_10():
+    members_index = []
+    # 通常の書き方
+    for member in members:
+        member_index = members.index(member)
+        members_index.append(member_index)
+    print("=== 通常の書き方 ===")
+    print(members_index)
+
+    # リスト内包表記
+    members_index2 = [members.index(member) for member in members]
+    print("=== リスト内包表記 ===")
+    print(members_index2)
+
+    # 補足：条件式をつけることもできる
+    members_index3 = [
+        members.index(member)
+        for member in members 
+        if member == "辻"
+    ]
+    print("=== リスト内包表記｟条件式あり｠ ===")
+    print(members_index3)
