@@ -7,3 +7,4 @@ from .loop_for import *
 from .str_operations import *
 from .list_operations import *
 from .dict_operations import *
+from .function import *
