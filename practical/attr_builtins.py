@@ -11,7 +11,11 @@ class test:
 
 user = test()
 
+class User:
+    pass
 
+class Job:
+    pass
 
 # === hasattrについて ===
 """
@@ -65,3 +69,17 @@ setattr(user,"job","エンジニア") # user.job = "エンジニア"という新
 print(user.name) # 田中
 print(user.age) # 24
 print(user.job) # エンジニア
+
+
+
+# Djangoプロジェクトのプロジェクトでよくみるsetattrの使われ方。
+# (例)userというtestモデルのオブジェクトがあったとする
+test_allow = ["name","age"] # testモデルのホワイトフィールド
+info = {"name":"佐々木","age":"25"} # フロントなりから送られてきた情報という程
+for key, value in info.items():
+    if key in test_allow:
+        setattr(user,key,value)#アトリビュートがセットされる
+    else:
+        print("エラー")
+
+user.save() #最後に保存する
