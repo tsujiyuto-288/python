@@ -1,10 +1,12 @@
 # 文字列の操作
 
+
 # 小文字への変換 lower()
 def str_operations_1():
     name = "TUJI"
     name_komoji = name.lower()
     print(f"{name_komoji}：これは小文字")
+
 
 # 大文字への変換 upper()
 def str_operations_2():
@@ -22,21 +24,23 @@ def str_operations_3():
     for date in date_list:
         print(f"{date}日")
 
+
 # 置換 replace()
 # 第一引数で渡した文字列が含まれる場合、第二引数で渡された文字列に置き換える
 def str_operations_4():
     members = [
-        {"name":"辻","curriculums":"算数"},
-        {"name":"佐藤","curriculums":"数学"},
-        {"name":"高橋","curriculums":"日本史"},
-        {"name":"中野","curriculums":"英語"},
-        {"name":"佐々木","curriculums":"算数"},
-        ]
+        {"name": "辻", "curriculums": "算数"},
+        {"name": "佐藤", "curriculums": "数学"},
+        {"name": "高橋", "curriculums": "日本史"},
+        {"name": "中野", "curriculums": "英語"},
+        {"name": "佐々木", "curriculums": "算数"},
+    ]
     for member in members:
         print(
             f'{member.get("name")}さんは'
             f'{member.get("curriculums").replace("算数","数学")}が得意教科です。'
-            )
+        )
+
 
 # 整形 format()
 # {}の場所に引数で指定した文字列を埋め込む。
@@ -45,8 +49,8 @@ def str_operations_5():
     month = 3
     day = 28
     # 順番に{}に入れられていく
-    message_1 = "今日は{}年{}月{}日です。".format(year,month,day)
+    message_1 = "今日は{}年{}月{}日です。".format(year, month, day)
     # {}にインデックス番号を書くことで指定することができる
-    message_2 = "今日は{1}年{2}月{0}日です。".format(day,year,month)
+    message_2 = "今日は{1}年{2}月{0}日です。".format(day, year, month)
     print(message_1)
     print(message_2)
