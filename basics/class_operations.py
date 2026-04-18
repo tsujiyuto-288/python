@@ -19,3 +19,7 @@ user = Student(name,age)
 # クラス名の後ろに()をつけて継承したいクラスを記述する
 class NewClass(Student):
     pass
+
+
+# クラスの属性を書き換える方法
+user.name = "これで上書き"
